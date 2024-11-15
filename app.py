@@ -61,7 +61,8 @@ if st.button("Review my code →"):
                 
                 # Send the user code for review
                 chatbot = model.start_chat(history=[])
-                response = chatbot.send_message(f"Review the following code and identify any bugs:\n{user_code} Before that make sure tell that the code is in which language..")
+                response = chatbot.send_message(f"You are an expert software engineer with extensive knowledge in various programming languages. Review the following code thoroughly for bugs, errors, and potential improvements. Please also identify the programming language used in the code and provide detailed explanations for any issues you find. Offer suggestions to improve the code where applicable:\n{user_code}")
+
                 
                 # Display the AI-generated response
                 st.subheader("Code Review")
